@@ -819,6 +819,8 @@ if (ENABLE_PACKAGE_CONFIG)
 		PUBLIC_HEADER DESTINATION	${CMAKE_INSTALL_INCLUDEDIR}
 	)
 
+	export (TARGETS sndfile NAMESPACE SndFile:: FILE ${PROJECT_BINARY_DIR}/SndFileTargets.cmake)
+
 	include (CMakePackageConfigHelpers)
 
 	if (ENABLE_EXTERNAL_LIBS)
